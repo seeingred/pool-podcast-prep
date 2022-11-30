@@ -24,8 +24,9 @@ async function copy(source, target) {
             reject();
         })
         writeStream.on('end', () => {
-            process.stdout.write('\n');
-            // process.stdout.write(`Copying: ${(100).toFixed(2)}% \n`);
+            readStream.close();
+            writeStream.close();
+            process.stdout.write(`Copying: ${(100).toFixed(2)}% \n`);
             resolve();
         });
         readStream.pipe(writeStream);

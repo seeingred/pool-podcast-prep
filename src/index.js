@@ -33,17 +33,13 @@ async function run() {
     const fileName = link.split('/')[link.split('/').length - 1];
 
     const fullName = baseName + fileName;
-    if (!fs.existsSync(fullName)) {
-        await downloadFile(link, fullName);
-    } else {
-        console.log(`${fullName} exists, skipping download.`);
-    }
+
+    console.log(`Show notes:  `, showNotes);
 
     const readline = createInterface({
         input: process.stdin,
         output: process.stdout
     });
-
     const readLineAsync = (msg) => {
         return new Promise((resolve) => {
             readline.question(msg, (userRes) => {
@@ -51,12 +47,16 @@ async function run() {
             });
         });
     };
-
-    console.log(`Show notes:  `, showNotes);
-
     const seekInput = await readLineAsync('Trim from (H:MM or M) [0]: ');
     const destInput = await readLineAsync('Copy destination [/Volumes/Untitled/]: ');
     readline.close();
+
+    if (!fs.existsSync(fullName)) {
+        await downloadFile(link, fullName);
+    } else {
+        console.log(`${fullName} exists, skipping download.`);
+    }
+    
     let currentName = fullName;
     if (seekInput) {
         let seek = 0;
@@ -73,10 +73,7 @@ async function run() {
     }
 
     const lastName = baseName + 'speed.mp3';
-    process.stdout.write("1\n2\n3\n4\n5");
-    console.log(`1:  `, 1);
     await speed(currentName, lastName);
-    console.log(`2:  `, 2);
     // const lastName = currentName;
 
     let dest = '/Volumes/Untitled/';
@@ -91,13 +88,7 @@ async function run() {
     }
 
     await copy(lastName, dest + fileName);
-    for (let i = 0; i < 10000; i++) {
-        console.log(`3:  `, 3);
-    }
-    process.stdout.write("1\n2\n3\n4\n5");
-    process.stdout.write(`_____________________________________________________________________________________________________________________\n`);
-    process.stdout.end('Done. Happy swimming :)\n');
-    console.log(`Done. Happy swimming :)`);
+
 }
 
 run();
