@@ -1,7 +1,6 @@
 const http = require('node:http');
 const { XMLParser, XMLBuilder, XMLValidator } = require('fast-xml-parser');
 const { parse } = require('node-html-parser');
-const axios = require('axios');
 
 async function getFeed(url) {
     let data = '';
