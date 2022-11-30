@@ -3,6 +3,7 @@ const { XMLParser } = require('fast-xml-parser');
 const { parse } = require('node-html-parser');
 const https = require('node:https'); // or 'https' for https:// URLs
 const fs = require('fs');
+const speed = require('./speed');
 
 async function getFeed(url) {
     let data = '';
@@ -73,12 +74,16 @@ async function run() {
         }
     }
     const fileName = link.split('/')[link.split('/').length - 1];
-    const fullName = 'downloads/' + fileName;
+    const baseName = 'downloads/';
+    const fullName = baseName + fileName;
     if (!fs.existsSync(fullName)) {
         await getFile(link, fullName);
     } else {
         console.log(`${fullName} exists, skipping download.`)
     }
+
+    await speed(fullName, baseName + 'speed.mp3')
+
     console.log(`Show notes:  `, showNotes);
 
     // after download completed close filestream

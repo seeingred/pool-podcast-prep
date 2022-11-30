@@ -29,9 +29,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["fast-xml-parser", "npm:4.0.12"],\
+            ["fluent-ffmpeg", "npm:2.1.2"],\
             ["node-html-parser", "npm:6.1.4"]\
           ],\
           "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["async", [\
+        ["npm:3.2.4", {\
+          "packageLocation": "./.yarn/cache/async-npm-3.2.4-aba13508f9-43d07459a4.zip/node_modules/async/",\
+          "packageDependencies": [\
+            ["async", "npm:3.2.4"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["boolbase", [\
@@ -128,11 +138,31 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["fluent-ffmpeg", [\
+        ["npm:2.1.2", {\
+          "packageLocation": "./.yarn/cache/fluent-ffmpeg-npm-2.1.2-692c218f68-ab7ed90948.zip/node_modules/fluent-ffmpeg/",\
+          "packageDependencies": [\
+            ["fluent-ffmpeg", "npm:2.1.2"],\
+            ["async", "npm:3.2.4"],\
+            ["which", "npm:1.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["he", [\
         ["npm:1.2.0", {\
           "packageLocation": "./.yarn/cache/he-npm-1.2.0-3b73a2ff07-3d4d6babcc.zip/node_modules/he/",\
           "packageDependencies": [\
             ["he", "npm:1.2.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["isexe", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/isexe-npm-2.0.0-b58870bd2e-26bf6c5480.zip/node_modules/isexe/",\
+          "packageDependencies": [\
+            ["isexe", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -164,6 +194,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["pool-podcast-prep", "workspace:."],\
             ["fast-xml-parser", "npm:4.0.12"],\
+            ["fluent-ffmpeg", "npm:2.1.2"],\
             ["node-html-parser", "npm:6.1.4"]\
           ],\
           "linkType": "SOFT"\
@@ -174,6 +205,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/strnum-npm-1.0.5-9ba11d2a0a-651b2031db.zip/node_modules/strnum/",\
           "packageDependencies": [\
             ["strnum", "npm:1.0.5"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["which", [\
+        ["npm:1.3.1", {\
+          "packageLocation": "./.yarn/cache/which-npm-1.3.1-f0ebb8bdd8-f2e185c624.zip/node_modules/which/",\
+          "packageDependencies": [\
+            ["which", "npm:1.3.1"],\
+            ["isexe", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
