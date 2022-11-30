@@ -121,6 +121,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mp3-cutter@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "mp3-cutter@npm:1.0.6"
+  bin:
+    mp3-cutter: ./bin/mp3-cutter
+  checksum: 8f4bbf829296a78c554eb66d2e56d70f732983c7a04e0d6d39331d3eb70dde266b434558f6030633055451ad53a8de564c1cb5c97082e665fbc3371706da3315
+  languageName: node
+  linkType: hard
+
 "node-html-parser@npm:^6.1.4":
   version: 6.1.4
   resolution: "node-html-parser@npm:6.1.4"
@@ -146,6 +155,7 @@ __metadata:
   dependencies:
     fast-xml-parser: ^4.0.12
     fluent-ffmpeg: ^2.1.2
+    mp3-cutter: ^1.0.6
     node-html-parser: ^6.1.4
   languageName: unknown
   linkType: soft

@@ -30,6 +30,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["fast-xml-parser", "npm:4.0.12"],\
             ["fluent-ffmpeg", "npm:2.1.2"],\
+            ["mp3-cutter", "npm:1.0.6"],\
             ["node-html-parser", "npm:6.1.4"]\
           ],\
           "linkType": "SOFT"\
@@ -167,6 +168,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["mp3-cutter", [\
+        ["npm:1.0.6", {\
+          "packageLocation": "./.yarn/cache/mp3-cutter-npm-1.0.6-5600df1c81-8f4bbf8292.zip/node_modules/mp3-cutter/",\
+          "packageDependencies": [\
+            ["mp3-cutter", "npm:1.0.6"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["node-html-parser", [\
         ["npm:6.1.4", {\
           "packageLocation": "./.yarn/cache/node-html-parser-npm-6.1.4-59d4a58063-fadf622c6b.zip/node_modules/node-html-parser/",\
@@ -195,6 +205,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["pool-podcast-prep", "workspace:."],\
             ["fast-xml-parser", "npm:4.0.12"],\
             ["fluent-ffmpeg", "npm:2.1.2"],\
+            ["mp3-cutter", "npm:1.0.6"],\
             ["node-html-parser", "npm:6.1.4"]\
           ],\
           "linkType": "SOFT"\

@@ -4,9 +4,10 @@
     "dependencies": {
         "fast-xml-parser": "^4.0.12",
         "fluent-ffmpeg": "^2.1.2",
+        "mp3-cutter": "^1.0.6",
         "node-html-parser": "^6.1.4"
     },
     "scripts": {
-        "start": "node index.js"
+        "start": "node src/index.js"
     }
 }
